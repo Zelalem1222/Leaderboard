@@ -1,39 +1,39 @@
- section {
-   display: flex;
-   padding: 1% 10%;
- }
+section {
+  display: flex;
+  padding: 1% 10%;
+}
 
- h1 {
-   margin-left: 8%;
-   padding-top: 3%;
- }
+h1 {
+  margin-left: 8%;
+  padding-top: 3%;
+}
 
- button {
-    cursor: pointer;
- }
+button {
+  cursor: pointer;
+}
 
- .score-board {
-    flex: 0.5;
- }
+.score-board {
+  flex: 0.5;
+}
 
- .scoreboard-header {
-    display: flex;
-    gap: 14.5%;
-    flex: 0.5;
-    align-items: baseline;
- }
+.scoreboard-header {
+  display: flex;
+  gap: 14.5%;
+  flex: 0.5;
+  align-items: baseline;
+}
 
- .scoreboard-header button {
-    height: 25px;
- }
+.scoreboard-header button {
+  height: 25px;
+}
 
- ul {
-   list-style: none;
- }
+ul {
+  list-style: none;
+}
 
- form {
-    display: flex;
-    flex-direction: column;
-    gap: 11%;
-    height: 156px;
- }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 11%;
+  height: 156px;
+}
