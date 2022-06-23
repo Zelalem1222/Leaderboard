@@ -3,7 +3,7 @@ import { display } from './modules/display';
 
 const submit = document.getElementById('submit');
 const refresh = document.getElementById('refresh');
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a1jL7pBQ8HR9eL9EL2zG/scores/'
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lGcv4uHBWKY5C0XB2d3f/scores'
 
 
 
@@ -13,8 +13,8 @@ submit.addEventListener('click' , () => {
     fetch(url ,{
       method : 'POST',
       body : JSON.stringify({
-        user: user.value.trim(),
-        score:score.value.trim(),
+        user:user.value.trim(),
+        score:score.value.trim()
       }),
       headers : {
         "Content-Type": "application/json; charset=UTF-8"
