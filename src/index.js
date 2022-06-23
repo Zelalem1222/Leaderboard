@@ -1,30 +1,21 @@
 import './style.css';
-import scoreList from './scoreList';
-import { v4 as uuidv4 } from 'uuid';
+import { display } from './modules/display';
 
-const display = (name, score) => {
-  
-};
 
-scoreList.forEach((score) => {
-  display(score.name, score.score);
-});
 
 const submit = document.getElementById('submit');
 const refresh = document.getElementById('refresh');
-
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a1jL7pBQ8HR9eL9EL2zG/scores/'
 
 submit.addEventListener('click' , (e) => {
   e.preventDefault;
-  const user = document.getElementById('user').value;
-  const score = document.getElementById('score').value;
-  const id = uuidv4();
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:id/scores/' ,{
+  const user = document.getElementById('user').value.trim();
+  const score = document.getElementById('score').value.trim();
+  fetch(url ,{
     method : 'POST',
     body : JSON.stringify({
       user: user,
       score:score,
-      id:id
     }),
     headers : {
       "Content-Type": "application/json; charset=UTF-8"
@@ -34,35 +25,27 @@ submit.addEventListener('click' , (e) => {
     return response.json();
   })
   .then((data) => {
-    console.log(data.result);
+    console.log(data);
   })
- 
+
+  user.value = '';
+  score.value= '';
 })
 
 async function populate() {
-const id = uuidv4();
-  const requestURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/:id/scores/';
+  const requestURL = url;
   const request = new Request(requestURL);
 
   const response = await fetch(request);
-  const scores = await response.json();
-  scores.forEach(score => {
-    
-  })
-  populateHeader(scores.result[9])
+  const scores =  await response.json();
+  const result = scores.result
+
+  result.forEach(score => {
+    display(score.user , score.score);
+  }) 
 }
 
-function populateHeader(obj) {
-  
 
-  document.querySelector('.list').innerHTML += `<ul >        
-    <li>${obj.user}</li></ul>`;
-
-  // for (let user of users) {
-    
-  // }
-
-}
 
 refresh.addEventListener('click' , populate)
 
