@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* body {
+  padding-left: 10%;
+} */
+
 section {
   display: flex;
-  padding: 1% 10%;
+  /* padding: 1% 10%; */
+  gap: 10%;
+  justify-content: center;
 }
 
 h1 {
-  margin-left: 8%;
+  margin-left: 17%;
   padding-top: 3%;
 }
 
@@ -18,8 +30,7 @@ button {
 
 .scoreboard-header {
   display: flex;
-  gap: 14.5%;
-  flex: 0.5;
+  justify-content: space-between;
   align-items: baseline;
 }
 
@@ -29,6 +40,9 @@ button {
 
 ul {
   list-style: none;
+  padding: 1.5% 2%;
+  margin: 0;
+  background-color: antiquewhite;
 }
 
 form {
@@ -36,4 +50,8 @@ form {
   flex-direction: column;
   gap: 11%;
   height: 156px;
+}
+
+.list {
+  border: 3px solid;
 }
