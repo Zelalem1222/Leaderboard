@@ -5,11 +5,12 @@
 }
 
 body {
-  background-color: #58A79D;
+  background-color: #58a79d;
 }
 
 section {
   display: flex;
+
   /* padding: 1% 10%; */
   gap: 10%;
   justify-content: center;
@@ -19,7 +20,8 @@ h1 {
   margin-left: 17%;
   padding-top: 3%;
 }
-h1, 
+
+h1,
 h2 {
   color: #fff;
 }
@@ -27,11 +29,12 @@ h2 {
 button {
   cursor: pointer;
   background-color: #fff;
-  transition: all 0.3s ease
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #A75862;
+form button {
+  width: 86px;
+  align-self: end;
 }
 
 .score-board {
@@ -53,11 +56,6 @@ button:hover {
   width: 20%;
 }
 
-form button {
-  width: 86px;
-  align-self: end;
-}
-
 ul {
   list-style: none;
   padding: 1.5% 2%;
@@ -65,8 +63,8 @@ ul {
   background-color: #fff;
 }
 
-ul:nth-child(odd) { 
-  background-color: lightgray;   
+ul:nth-child(odd) {
+  background-color: lightgray;
 }
 
 form {
@@ -78,4 +76,8 @@ form {
 
 .list {
   border: 3px solid;
+}
+
+button:hover {
+  background-color: #a75862;
 }
