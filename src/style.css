@@ -10,8 +10,6 @@ body {
 
 section {
   display: flex;
-
-  /* padding: 1% 10%; */
   gap: 10%;
   justify-content: center;
 }
