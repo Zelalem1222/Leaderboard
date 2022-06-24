@@ -1,15 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-color: #58a79d;
+}
+
 section {
   display: flex;
-  padding: 1% 10%;
+  gap: 10%;
+  justify-content: center;
 }
 
 h1 {
-  margin-left: 8%;
+  margin-left: 17%;
   padding-top: 3%;
+}
+
+h1,
+h2 {
+  color: #fff;
 }
 
 button {
   cursor: pointer;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+form button {
+  width: 86px;
+  align-self: end;
 }
 
 .score-board {
@@ -18,22 +41,41 @@ button {
 
 .scoreboard-header {
   display: flex;
-  gap: 14.5%;
-  flex: 0.5;
+  justify-content: space-between;
   align-items: baseline;
+}
+
+.add-score {
+  width: 200px;
 }
 
 .scoreboard-header button {
   height: 25px;
+  width: 20%;
 }
 
 ul {
   list-style: none;
+  padding: 1.5% 2%;
+  margin: 0;
+  background-color: #fff;
+}
+
+ul:nth-child(odd) {
+  background-color: lightgray;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 11%;
+  gap: 12%;
   height: 156px;
+}
+
+.list {
+  border: 3px solid;
+}
+
+button:hover {
+  background-color: #a75862;
 }
