@@ -4,9 +4,9 @@
   font-family: 'Oswald', sans-serif;
 }
 
-/* body {
-  padding-left: 10%;
-} */
+body {
+  background-color: #58A79D;
+}
 
 section {
   display: flex;
@@ -19,9 +19,19 @@ h1 {
   margin-left: 17%;
   padding-top: 3%;
 }
+h1, 
+h2 {
+  color: #fff;
+}
 
 button {
   cursor: pointer;
+  background-color: #fff;
+  transition: all 0.3s ease
+}
+
+button:hover {
+  background-color: #A75862;
 }
 
 .score-board {
@@ -34,21 +44,35 @@ button {
   align-items: baseline;
 }
 
+.add-score {
+  width: 200px;
+}
+
 .scoreboard-header button {
   height: 25px;
+  width: 20%;
+}
+
+form button {
+  width: 86px;
+  align-self: end;
 }
 
 ul {
   list-style: none;
   padding: 1.5% 2%;
   margin: 0;
-  background-color: antiquewhite;
+  background-color: #fff;
+}
+
+ul:nth-child(odd) { 
+  background-color: lightgray;   
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 11%;
+  gap: 12%;
   height: 156px;
 }
 
