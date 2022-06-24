@@ -33,7 +33,7 @@ async function getScore() {
   const response = await fetch(request);
   const scores = await response.json();
   const { result } = scores;
-
+  document.querySelector('.list').innerHTML = '';
   result.forEach((score) => {
     display(score.user, score.score);
   });
