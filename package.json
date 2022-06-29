@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Zelalem1222/Leaderboard/issues"
   },
-  "homepage": "https://github.com/Zelalem1222/Leaderboard#readme",
+  "homepage": "https://github.com/Zelalem1222/Leaderboard",
   "devDependencies": {
     "@hint/connector-local": "^3.2.20",
     "@hint/formatter-stylish": "^3.1.29",
